@@ -1,0 +1,29 @@
+Spec files for HyperVM and Kloxo
+
+These RPM packages are created to get rid of external tarball/zip packages.
+In the future you can install and keep up to date with the products with yum.
+
+At some point every LxCenter builded package is showed here.
+
+Packager: Danny Terweij <d.terweij-at-lxcenter.org>
+
+
+Licence
+
+    LxCenter RPM packages
+
+    Copyright (C) 2000-2009    LxLabs
+    Copyright (C) 2009-2012    LxCenter
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
