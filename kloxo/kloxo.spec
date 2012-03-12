@@ -40,9 +40,8 @@ Conflicts: postfix, sendmail, sendmail-cf, exim, vsftpd, dovecot
 Obsoletes: lxzend
 
 # Defaults
-Requires: php >= 5.2.17, lxphp
+Requires: php >= 5.2.17
 Requires: php-mysql, php-mbstring, php-imap, php-pear, php-gd
-Requires: lxcenter-release
 Requires: bind, bind-chroot, bind-utils
 Requires: mysql, mysql-server
 Requires: httpd, mod_ssl
@@ -58,6 +57,8 @@ Requires: apr, apr-util, rrdtool, pcre, t1lib
 Requires: lxjailshell
 
 # NEW kloxo=*
+# LxCenter Repository
+Requires: lxcenter-release
 # Core
 Requires: kloxo-core-ckeditor, kloxo-core-extjs, kloxo-core-lighttpd
 Requires: kloxo-core-php, kloxo-core-phpMyAdmin, kloxo-core-sshterm-applet
