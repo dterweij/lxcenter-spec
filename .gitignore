@@ -1,0 +1,15 @@
+# Ignore config files from Eclipse IDE
+.buildpath
+.project
+.settings/
+.externalToolBuilders/
+
+# Ignore .diff files on development
+*.diff
+
+# Ignore files from patches
+*.orig
+*.rej
+
+# Ignore PHPStorm files
+.idea/
