@@ -57,6 +57,24 @@ Provides: %{name}
 %description
 Virtualization Manager for OpenVZ and Xen.
 
+%pre
+echo "Info: Starting LxCenter checks..."
+    if [ -f /script/version ]; then
+        echo "Info: Script dir found."
+        if [ -d /usr/local/%{brand}/hypervm ]; then
+                echo "Info: HyperVM found, checking for the version."
+                versioncheck=`/script/version`
+                echo "Info: Found HyperVM version: $versioncheck"
+                        if [ $versioncheck == "2.0.7993" ]; then
+                                echo "Error: This package only works with HyperVM 2.1.0+"
+                                exit 1
+                        fi
+        fi
+    else
+        echo "Error: You have to install HyperVM first with the installer."
+        exit 1
+    fi
+
 %prep
 %setup -q -n %{name}-%{version}
 
