@@ -1,7 +1,7 @@
 %define name 	hypervm-core-php
 %define packagename php
-%define version 5.6.28
-%define release 1%{?dist}
+%define version 5.6.40
+%define release 2%{?dist}
 %define brand   lxlabs
 
 Name: %{name}       
@@ -31,12 +31,15 @@ BuildRequires: zlib-devel, pcre-devel >= 6.6, smtpdaemon, readline-devel
 BuildRequires: bzip2, perl, libtool >= 1.4.3, gcc-c++
 BuildRequires: libxml2-devel, openssl-devel, libcurl-devel, gdbm-devel
 BuildRequires: libjpeg-turbo-devel, gmp-devel, libc-client-devel
-BuildRequires: libmcrypt-devel, mhash-devel, mysql-devel, postgresql-devel
-BuildRequires: gdbm-devel
-Obsoletes: php-dbg, php3, phpfi, stronghold-php, lxphp <= 5.2.1
+BuildRequires: libmcrypt-devel, mhash-devel, postgresql-devel
+BuildRequires: gdbm-devel, mysql-community-devel >= 5.7
+Obsoletes: php-dbg, php3, phpfi, stronghold-php, lxphp <= 5.2.1, mysql-devel <= 5.5
 Requires: libmhash
 
 %pre
+echo "###############################"
+echo "!! ALERT: PHP 5.6 is now EOL !!"
+echo "###############################"
 echo "Info: Starting LxCenter checks..."
     if [ -f /script/version ]; then
         echo "Info: Script dir found."
@@ -186,7 +189,38 @@ rm -rf %{buildroot}
 %defattr(-, root, root)
 %doc
 
+
 %changelog
+* Sun Apr 5 2020 Danny Terweij <danny@terweij.nl> 5.6.40-2
+- Rebuild for MySQL 5.7 community verion
+- For my own hvm installation at home
+- Last version of 5.6 because it is EOL
+
+* Tue Feb 12 2019 Danny Terweij <danny@terweij.nl> 5.6.40-1
+- Upstream 5.6.40
+- For my own hvm installation at home
+- Last version of 5.6 because it is EOL
+
+* Sat Dec 15 2018 Danny Terweij <danny@terweij.nl> 5.6.39-1
+- Upstream 5.6.39
+- For my own hvm installation at home
+
+* Mon Oct 01 2018 Danny Terweij <danny@terweij.nl> 5.6.38-1
+- Upstream 5.6.38
+- For my own hvm installation at home
+
+* Sun Aug 27 2017 Danny Terweij <danny@terweij.nl> 5.6.31-1
+- Upstream 5.6.31
+- For my own hvm installation at home
+
+* Mon Feb 13 2017 Danny Terweij <danny@terweij.nl> 5.6.30-1
+- Upstream 5.6.30
+- For my own hvm installation at home
+
+* Sat Jan 14 2017 Danny Terweij <danny@terweij.nl> 5.6.29-1
+- Upstream 5.6.29
+- For my own hvm installation at home
+
 * Sat Nov 19 2016 Danny Terweij <danny@terweij.nl> 5.6.28-1
 - Upstream 5.6.28
 - For my own hvm installation at home
